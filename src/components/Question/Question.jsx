@@ -3,10 +3,11 @@ import {QuizContext} from '../../context/quiz';
 
 function Question(){
     const [quizState, dispatch] = useContext(QuizContext);
+    const currentQuestion = quizState.questions[quizState.currentQuestion];
     return(
         <div id='question'>
             <p>Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}</p>
-            <h2>Pergunta atual</h2>
+            <h2>{currentQuestion.question}</h2>
             <div id="opstions-container">
                 <p>Opções</p>
             </div>
