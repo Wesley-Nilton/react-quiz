@@ -12,7 +12,7 @@ function Question(){
             <div id="opstions-container">
                 <p>Opções</p>
             </div>
-            <button>Continuar</button>
+            <button onClick={() => dispatch({type: 'CHANGE_QUESTION'})}>Continuar</button>
         </div>
     )
 }
