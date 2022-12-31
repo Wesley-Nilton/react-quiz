@@ -8,7 +8,10 @@ function Question(){
     const currentQuestion = quizState.questions[quizState.currentQuestion];
 
     const onSelectOption = (option) => {
-        console.log(option);
+        dispatch({
+            type: 'CHECK_ANSWER',
+            paylod: {answer: currentQuestion.answer, option},
+        });
     }
 
     return(
